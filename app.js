@@ -1,13 +1,17 @@
 const express = require('express')
+const dotenv = require('dotenv').config()
+
+const port = process.env.PORT
 
 const app = express();
+app.use(express.json())
+app.use(express.urlencoded({
+    extend: false
+}))
 
-const PORT = 400
-
-app.listen(PORT, ()=>{
-    console.log("Alhamdoulillah is working fine !");
+app.listen(port, () => {
+    console.log("Alhamdoulillah is working fine ! "+ port); 
 })
-
 app.get('/', (req, res) =>{
     res.send("You are on the API home")
 })
