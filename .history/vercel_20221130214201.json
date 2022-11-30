@@ -1,0 +1,8 @@
+{
+    "build": [
+        {
+          "src": "app.js",
+          "use": "@now/node"
+        }
+      ],
+}
