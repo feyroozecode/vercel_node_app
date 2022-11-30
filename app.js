@@ -15,3 +15,5 @@ app.get('/', (req, res) =>{
 app.get('/about', (req, res)=> {
     res.send('This is a about route...')
 })
+
+module.exports = app
